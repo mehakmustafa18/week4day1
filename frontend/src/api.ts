@@ -2,7 +2,8 @@ import axios from "axios";
 import { Task, CreateTaskDTO } from "./types";
 
 const API = axios.create({
-  baseURL: "https://week4day1-w3yt.vercel.app/api",
+  baseURL:
+    process.env.REACT_APP_API_URL || "https://week4day1-w3yt.vercel.app/api",
 });
 
 export const getTasks = async (): Promise<Task[]> => {
