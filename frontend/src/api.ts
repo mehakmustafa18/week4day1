@@ -1,17 +1,17 @@
-import axios from 'axios';
-import { Task, CreateTaskDTO } from './types';
+import axios from "axios";
+import { Task, CreateTaskDTO } from "./types";
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: "http://week4day1-w3yt.vercel.app/api",
 });
 
 export const getTasks = async (): Promise<Task[]> => {
-  const res = await API.get<Task[]>('/tasks');
+  const res = await API.get<Task[]>("/tasks");
   return res.data;
 };
 
 export const createTask = async (data: CreateTaskDTO): Promise<Task> => {
-  const res = await API.post<Task>('/tasks', data);
+  const res = await API.post<Task>("/tasks", data);
   return res.data;
 };
 
