@@ -3,7 +3,11 @@ import cors from "cors";
 import { Task, CreateTaskDTO } from "./types";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://week4day1-yp8k.vercel.app",
+  }),
+);
 app.use(express.json());
 
 // Default 2 tasks loaded on server start
