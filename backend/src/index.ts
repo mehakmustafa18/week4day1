@@ -98,8 +98,9 @@ app.delete("/api/tasks/:id", (req: Request, res: Response) => {
   res.json({ message: "Task deleted successfully" });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`✅ Server running → http://localhost:${PORT}`);
-  console.log(`📋 2 default tasks loaded!`);
-});
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => {
+//   console.log(`✅ Server running → http://localhost:${PORT}`);
+//   console.log(`📋 2 default tasks loaded!`);
+// });
+export default app;
