@@ -7,7 +7,7 @@ app.use(
   cors({
     origin: [
       "https://week4day1-yp8k.vercel.app",
-      "https://week4day1-omega.vercel.app",
+      // "https://week4day1-omega.vercel.app",
       "http://localhost:3000",
     ],
   }),
