@@ -5,7 +5,11 @@ import { Task, CreateTaskDTO } from "./types";
 const app = express();
 app.use(
   cors({
-    origin: "https://week4day1-yp8k.vercel.app",
+    origin: [
+      "https://week4day1-yp8k.vercel.app",
+      "https://week4day1-omega.vercel.app",
+      "http://localhost:3000",
+    ],
   }),
 );
 app.use(express.json());
