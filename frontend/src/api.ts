@@ -5,7 +5,9 @@ const API = axios.create({
   baseURL:
     process.env.REACT_APP_API_URL || "https://week4day1-w3yt.vercel.app/api",
 });
-
+// const API = axios.create({
+//   baseURL: "http://localhost:5000/api",
+// });
 export const getTasks = async (): Promise<Task[]> => {
   const res = await API.get<Task[]>("/tasks");
   return res.data;
